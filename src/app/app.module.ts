@@ -4,9 +4,6 @@ import { FormsModule } from '@angular/forms'
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { AuthPageComponent } from './pages/auth-page/auth-page.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
-import { LoginComponent } from './components/auth/login/login.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { InputFormComponent } from './pages/input-form/input-form.component';
@@ -27,9 +24,6 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
-    AuthPageComponent,
-    SignupComponent,
-    LoginComponent,
     LoginPageComponent,
     SignupPageComponent,
     InputFormComponent

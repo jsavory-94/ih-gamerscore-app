@@ -2,7 +2,7 @@
 
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && signUpUsernameField.errors}">
     <label>User Name:</label>
-    <input type="text" name="username" [(ngModel)]="username" #signUpUsernameField="ngModel" required minlength="6" [disabled]="processing"/>
+    <input type="text" name="username" [(ngModel)]="user.username" #signUpUsernameField="ngModel" required minlength="6" [disabled]="processing"/>
     <div *ngIf="feedbackEnabled && signUpUsernameField.errors">
       <p *ngIf="signUpUsernameField.errors.required" class="validation">username required</p>
       <p *ngIf="signUpUsernameField.errors.minlength" class="validation">username is too short</p>
@@ -11,7 +11,7 @@
  
   <div class="field" [ngClass]="{'has-error': feedbackEnabled && signUpPasswordField.errors}">
     <label>Password: </label>
-    <input type="password" name="password" [(ngModel)]="password" #signUpPasswordField="ngModel" required minlength="6" [disabled]="processing"/>
+    <input type="password" name="password" [(ngModel)]="user.password" #signUpPasswordField="ngModel" required minlength="6" [disabled]="processing"/>
     <div *ngIf="feedbackEnabled && signUpPasswordField.errors">
       <p *ngIf="signUpPasswordField.errors.required" class="validation">Password required</p>
       <p *ngIf="signUpPasswordField.errors.minlength" class="validation">Password is too short</p>
