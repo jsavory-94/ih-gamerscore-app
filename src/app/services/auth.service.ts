@@ -4,14 +4,14 @@ import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/toPromise';
 
-// import { environment } from '../../environments/environment';
+import { environment } from '../../environments/environment';
+const API_URL = environment.apiUrl + '/auth';
+
 @Injectable()
 export class AuthService {
 
   private user: any;
   private userChange: Subject<any> = new Subject();
-
-  private API_URL = 'http://localhost:3000/auth';
 
   userChange$: Observable<any> = this.userChange.asObservable();
 
@@ -27,7 +27,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.API_URL}/me`, options)
+    return this.httpClient.get(`${API_URL}/me`, options)
       .toPromise()
       .then((user) => this.setUser(user))
       .catch((err) => {
@@ -41,7 +41,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/login`, user, options)
+    return this.httpClient.post(`${API_URL}/login`, user, options)
       .toPromise()
       .then((data) => this.setUser(data));
   }
@@ -50,7 +50,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/signup`, user, options)
+    return this.httpClient.post(`${API_URL}/signup`, user, options)
       .toPromise()
   }
 
@@ -58,7 +58,7 @@ export class AuthService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.API_URL}/logout`, {}, options)
+    return this.httpClient.post(`${API_URL}/logout`, {}, options)
       .toPromise()
       .then(() => this.setUser());
   }
