@@ -9,15 +9,16 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { InputFormComponent } from './pages/input-form/input-form.component';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { UserStatsComponent } from './pages/user-stats/user-stats.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home',   component: HomePageComponent },
-  { path: 'login',  component: LoginPageComponent },
-  { path: 'signup', component: SignupPageComponent },
-  { path: 'input-form', component:InputFormComponent}
+  { path: 'auth/login',  component: LoginPageComponent },
+  { path: 'auth/signup', component: SignupPageComponent },
+  { path: 'user-info/input-form', component:InputFormComponent},
+  { path: 'user-info/user-stats', component: UserStatsComponent}
 ];
 
 @NgModule({
@@ -26,7 +27,8 @@ const routes: Routes = [
     HomePageComponent,
     LoginPageComponent,
     SignupPageComponent,
-    InputFormComponent
+    InputFormComponent,
+    UserStatsComponent
   ],
   imports: [
     BrowserModule,

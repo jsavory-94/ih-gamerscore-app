@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.css'],
   providers: [AuthService]
 })
+
 export class LoginPageComponent implements OnInit {
 
   user: any = {};
@@ -27,7 +28,7 @@ export class LoginPageComponent implements OnInit {
     this.feedbackEnabled = true;
     if (form.valid) {
       this.processing = true;
-      this.auth.login(this.user)
+      this.auth.login(this.user)  
       .then((result) => {
         this.router.navigate(['/home'])})
       .catch((err) => {

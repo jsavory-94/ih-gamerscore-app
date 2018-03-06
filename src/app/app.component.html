@@ -2,14 +2,15 @@
 <nav>
   <div class = "navA">
     <ul>
-      <li> <a [routerLink] = "['input-form']">Input scores</a></li>
+      <li> <a [routerLink] = "['/user-info/input-form']">Input scores</a></li>
     </ul>
   </div>
 
   <div class = "navB">
       <ul>
-        <li> <a [routerLink] = "['login']">Login</a></li>
-        <li> <a [routerLink] = "['signup']">Sign up</a></li>
+        <li> <a [routerLink] = "['auth/login']">Login</a></li>
+        <li> <a [routerLink] = "['auth/signup']">Sign up</a></li> 
+        <li> <button (click)="logout()"> Log out </button></li>
       </ul>
     </div>
 </nav>

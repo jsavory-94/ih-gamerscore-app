@@ -1,3 +1,23 @@
-<p>
-  input-form works!
-</p>
+<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+    <label>Game 1 Score</label>
+    <input type="text" name="game1_score" [(ngModel)]="scores.score1" #nameField="ngModel" [disabled]="processing"/>
+  </div>
+  
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+    <label>Game 2 Score</label>
+    <input type="text" name="game2_score" [(ngModel)]="scores.score2" #nameField="ngModel" [disabled]="processing"/>
+  </div>  
+  
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+    <label>Game 3 Score</label>
+    <input type="text" name="game3_score" [(ngModel)]="scores.score3" #nameField="ngModel" [disabled]="processing"/>
+  </div>
+  
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+    <label>Game 4 Score</label>
+    <input type="text" name="game4_score" [(ngModel)]="scores.score4" #nameField="ngModel" [disabled]="processing"/>
+  </div>
+  
+  <button type="submit" [disabled]="processing">Submit scores</button>
+</form>
