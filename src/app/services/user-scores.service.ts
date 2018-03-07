@@ -11,11 +11,19 @@ export class UserScoreService {
 
     constructor(private httpClient: HttpClient) { }
 
-    score(user: any): Promise<any> {
+    score(scores: any): Promise<any> {
         const options = {
           withCredentials: true
         };
-        return this.httpClient.post(`${API_URL}/input-form`, user, options)
+        return this.httpClient.post(`${API_URL}/input-form`, { scores: scores }, options)
           .toPromise()
       }
+
+    getScore(id: string): Promise<any> {
+      const options = {
+        withCredentials: true
+      };
+      return this.httpClient.get(`${API_URL}/users/${id}`, options)
+        .toPromise()
+    }
 }

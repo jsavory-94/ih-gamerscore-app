@@ -1,3 +1,6 @@
-<p>
-  home-page works!
-</p>
+<ul *ngIf="scores">
+  <li> {{user.username}} scored {{ scores.score1 }} points on Treasure Hunt </li>
+  <li> {{user.username}} scored {{ scores.score2 }} points on Game 2 </li>
+  <li> {{user.username}} scored {{ scores.score3 }} points on Game 3 </li>
+  <li> {{user.username}} scored {{ scores.score4 }} points on Game 4 </li>
+</ul>
