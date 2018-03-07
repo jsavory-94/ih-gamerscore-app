@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-stats',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-stats.component.css']
 })
 export class UserStatsComponent implements OnInit {
+  @Input() user: any;
 
   constructor() { }
 

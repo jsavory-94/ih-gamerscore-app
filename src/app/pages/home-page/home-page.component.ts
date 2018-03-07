@@ -11,7 +11,7 @@ import { AuthService} from '../../services/auth.service';
 
 export class HomePageComponent implements OnInit {
 
-  user: any;
+  users: any;
   scores: any;
 
   constructor(
@@ -20,13 +20,10 @@ export class HomePageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.user = this.authService.getUser();
-    this.scores = this.user.scores;
-    console.log(this.scores);
-    //this.userScoreService.getScore(this.user._id)
-      // .then(scores => {
-      //   this.scores = scores;
-      //   console.log(this.scores);
-    // });
+    this.userScoreService.getAllUsers()
+      .then(users => {
+        this.users = users;
+        console.log(this.users);
+      });
   }
 }

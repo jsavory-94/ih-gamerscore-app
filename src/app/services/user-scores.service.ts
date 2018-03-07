@@ -26,4 +26,12 @@ export class UserScoreService {
       return this.httpClient.get(`${API_URL}/users/${id}`, options)
         .toPromise()
     }
+
+    getAllUsers(): Promise<any> {
+      const options = {
+        withCredentials: true
+      };
+      return this.httpClient.get(`${API_URL}/users`, options)
+        .toPromise()
+    }
 }
