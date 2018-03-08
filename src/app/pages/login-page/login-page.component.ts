@@ -30,7 +30,7 @@ export class LoginPageComponent implements OnInit {
       this.processing = true;
       this.auth.login(this.user)  
       .then((result) => {
-        this.router.navigate(['/home'])})
+        this.router.navigate(['/user-info/input-form'])})
       .catch((err) => {
         this.error = err.error.error; // :-)
         this.processing = false;
