@@ -1,0 +1,22 @@
+.field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  
+  .field input {
+    width: 80%;
+    max-width: 600px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+  
+  .field.control {
+    display: flex;
+    justify-content: space-between;
+  }

@@ -1,0 +1,37 @@
+.field {
+    margin-bottom: 20px;
+  }
+  
+  .field label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  
+  .field input {
+    width: 35%;
+    max-width: 600px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid black;
+  }
+  
+  .field.control {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .blockquote {
+    width: 100%;
+    margin: 40px 0 0 -50px;
+    padding: 36px 50px;
+    position: relative;
+    background: #c2c2c2;
+    margin-bottom: 28px;  
+    }
+
+  .blockquote p {
+      font-size: 22px;
+      line-height: 1.5em;
+      margin-bottom: 28px;
+    }
