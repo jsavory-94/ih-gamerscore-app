@@ -18,9 +18,12 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.user = this.authService.getUser();
-    this.scores = this.user.scores;
-    console.log(this.scores);
+    this.authService.me()
+      .then((user) => {
+        this.user = user;
+        this.scores = this.user.scores;
+        console.log(this.scores);
+      })
     //this.userScoreService.getScore(this.user._id)
       // .then(scores => {
       //   this.scores = scores;

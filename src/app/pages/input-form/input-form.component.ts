@@ -30,7 +30,7 @@ export class InputFormComponent implements OnInit {
       this.processing = true;
       this.userScore.score(this.scores)  
       .then((result) => {
-        this.router.navigate(['user-info/user-stats'])})
+        this.router.navigate(['user-info/profile'])})
       .catch((err) => {
         this.error = err.error.error; // :-)
         this.processing = false;
