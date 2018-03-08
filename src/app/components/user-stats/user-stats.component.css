@@ -1,8 +1,11 @@
 :host {
     margin: 10px;
-    font-size: 30px;
+    font-size: 25px;
+    list-style-type: none;
 }
 
 ul {
-    background-color: green;
+    list-style-type: none;
+    background-color: #c2c2c2;
+    width: 80vw;
 }

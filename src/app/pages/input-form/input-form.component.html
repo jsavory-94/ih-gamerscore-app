@@ -1,31 +1,35 @@
-<div class="input-form">
-
-<form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-    <label>Game 1 Score</label>
-    <input type="text" name="game1_score" [(ngModel)]="scores.score1" #nameField="ngModel" [disabled]="processing"/>
-  </div>
-  
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-    <label>Game 2 Score</label>
-    <input type="text" name="game2_score" [(ngModel)]="scores.score2" #nameField="ngModel" [disabled]="processing"/>
-  </div>  
-  
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-    <label>Game 3 Score</label>
-    <input type="text" name="game3_score" [(ngModel)]="scores.score3" #nameField="ngModel" [disabled]="processing"/>
-  </div>
-  
-  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-    <label>Game 4 Score</label>
-    <input type="text" name="game4_score" [(ngModel)]="scores.score4" #nameField="ngModel" [disabled]="processing"/>
-  </div>
-  
-  <button type="submit" [disabled]="processing">Submit scores</button>
-</form>
-
-</div>
-
 <div class = "blockquote">
     <p>"Honesty is the first chapter in the book of wisdom." -Thomas Jefferson</p>
 </div>
+
+<div class = "SHOWMEWHATYOUGOT">
+<img src="https://thumbs.gfycat.com/DeterminedAlarmingCattle-size_restricted.gif">
+</div>
+
+<div class="input-form">
+  <form (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+      <label>Treasure Hunt Score</label>
+      <input type="text" name="game1_score" [(ngModel)]="scores.score1" #nameField="ngModel" [disabled]="processing"/>
+    </div>
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+      <label>Dragon Pang Score</label>
+      <input type="text" name="game2_score" [(ngModel)]="scores.score2" #nameField="ngModel" [disabled]="processing"/>
+    </div>  
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+      <label>Don Trumpito Score</label>
+      <input type="text" name="game3_score" [(ngModel)]="scores.score3" #nameField="ngModel" [disabled]="processing"/>
+    </div>
+
+    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+      <label>Fat Cat Score</label>
+      <input type="text" name="game4_score" [(ngModel)]="scores.score4" #nameField="ngModel" [disabled]="processing"/>
+    </div>
+
+    <button type="submit" [disabled]="processing">Submit scores</button>
+  </form>
+
+</div>
+

@@ -24,7 +24,7 @@
   .blockquote {
     width: 100%;
     margin: 40px 0 0 -50px;
-    padding: 36px 50px;
+    padding: 24px 50px;
     position: relative;
     background: #c2c2c2;
     margin-bottom: 28px;  
@@ -33,5 +33,9 @@
   .blockquote p {
       font-size: 22px;
       line-height: 1.5em;
-      margin-bottom: 28px;
+      margin-bottom: 10px 0 0 10px;
     }
+
+    .SHOWMEWHATYOUGOT{
+      margin-bottom: 15px;
+}
