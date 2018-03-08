@@ -10,8 +10,8 @@
   <div class = "navB">
       <ul>
        <div *ngIf="!user">
-        <li> <a [routerLink] = "['auth/login']">Login</a></li>
-        <li> <a [routerLink] = "['auth/signup']">Sign up</a></li> 
+        <li> <a [routerLink] = "['auth/login']"><button> Login </button></a></li>
+        <li> <a [routerLink] = "['auth/signup']"><button>Sign up</button></a></li> 
        </div>
 
        <div *ngIf="user">
